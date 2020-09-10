@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <form name="search">
+        <input type="text" name="text" placeholder="Введіть щось"></input>
+        <input type="button" name="print" value="Кнопка" />
+        </form>
+        <div id="printText"></div>
+        <script>
+            var keyBox = document.search.text;
+            function onchange(e){
+                var printText = document.getElementById("printText");
+                
+                printText.textContent = e.target.value;
+            }
+            keyBox.addEventListener("change", onchange);
+        </script>
+    </body>
+</html>
